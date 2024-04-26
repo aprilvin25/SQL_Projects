@@ -175,8 +175,8 @@ WITH row_num_CTE AS(
 SELECT *, 
 	ROW_NUMBER() OVER(
     PARTITION BY Parcel_id,
-				 Property_address,
-				 sale_price,
+	         Property_address,
+		 sale_price,
                  sale_date,
                  legal_reference
                  ORDER BY unique_id) row_num
